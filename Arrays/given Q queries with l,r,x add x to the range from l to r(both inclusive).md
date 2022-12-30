@@ -82,8 +82,8 @@ int main()
     // {
     //     int l, r, x;
     //     cin >> l >> r >> x;
-    //     prefix[l - 1] += x;
-    //     prefix[r] -= x;
+    //     prefix[l] += x;
+    //     prefix[r + 1] -= x;
     // }
     for (int i = 0; i < q; i++)
     {
