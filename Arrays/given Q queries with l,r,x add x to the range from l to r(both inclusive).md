@@ -3,7 +3,6 @@
 # Input:
 ```md
 10
-0 0 0 0 0 0 0 0 0 0
 5
 2 5 3
 3 7 2
@@ -32,11 +31,7 @@ int main()
 {
     int n;
     cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
+    int arr[n] = {0};
     int q;
     cin >> q;
     while (q--)
@@ -60,7 +55,7 @@ int main()
     - Here we will use prefix sum array to solve this problem. We will iterate over the array and add x to the lth index and subtract x from the (r+1)th index. After this we will iterate over the prefix sum array and print the final array. 
 
     - Time Complexity: O(n+q)
-    - Space Complexity: O(n)
+    - Space Complexity: O(1)
 
 ```cpp
 #include <iostream>
@@ -70,11 +65,6 @@ int main()
 {
     int n;
     cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
     int prefix[n] = {0};
     int q;
     cin >> q;
@@ -89,6 +79,10 @@ int main()
     {
         int l, r, x;
         cin >> l >> r >> x;
+        if (r = n - 1){
+            prefix[l] += x;
+            continue;
+        } 
         prefix[l] += x;
         prefix[r+1] -= x;
     }
@@ -108,7 +102,7 @@ int main()
     - Here we will use binary indexed tree to solve this problem. We will iterate over the array and add x to the lth index and subtract x from the (r+1)th index. After this we will iterate over the binary indexed tree and print the final array. 
 
     - Time Complexity: O(n+q)
-    - Space Complexity: O(n)
+    - Space Complexity: O(1)
 
 ```cpp
 #include <iostream>
@@ -136,11 +130,6 @@ int main()
 {
     int n;
     cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
     int BIT[n + 1] = {0};
     int q;
     cin >> q;
