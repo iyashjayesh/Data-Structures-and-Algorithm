@@ -21,7 +21,5 @@
 - 5. Commit and push the changes.
 - 6. Create a pull request.
 - 7. Wait for the pull request to get merged.
-- 8. Star this repository.
-- 9. Follow me on GitHub.
-- 10. Enjoy and keep learning.
+- 8. Star this repository. :)
 
