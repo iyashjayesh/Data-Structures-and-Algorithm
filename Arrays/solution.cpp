@@ -1,3 +1,4 @@
+// solution.cpp -> this file is just for testing. You can use this file to test your code. You can also use this file to test your code on your local machine.
 #include <iostream>
 using namespace std;
 
@@ -10,26 +11,20 @@ int main()
     {
         cin >> arr[i];
     }
-    int prefix[n];
-    prefix[0] = arr[0];
-    for (int i = 1; i < n; i++)
-    {
-        prefix[i] = prefix[i - 1] + arr[i];
-    }
     int q;
     cin >> q;
     while (q--)
     {
-        int l, r;
-        cin >> l >> r;
-        if (l == 0)
+        int l, r, x;
+        cin >> l >> r >> x;
+        for (int i = l; i < r + 1; i++)
         {
-            cout << prefix[r] << endl;
-            continue;
+            arr[i] += x;
         }
-        int sum = prefix[r] - prefix[l - 1];
-        cout << sum << endl;
     }
-
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
     return 0;
 }
