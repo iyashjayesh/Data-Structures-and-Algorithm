@@ -100,3 +100,44 @@ int main()
     return 0;
 }
 ```
+
+3. Approach 3: Prefix Sum Array (Optimized)
+    - use the same approach as in Approach 2 but instead of creating a prefix sum array, we will create a prefix sum array in the same array.
+
+    - Time Complexity: O(n+q)
+    - Space Complexity: O(1)
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    for (int i = 1; i < n; i++)
+    {
+        arr[i] = arr[i - 1] + arr[i];
+    }
+    int q;
+    cin >> q;
+    while (q--)
+    {
+        int l, r;
+        cin >> l >> r;
+        if (l == 0){
+            cout << arr[r] << endl;
+            continue;
+        }
+        int sum = arr[r] - arr[l - 1];
+        cout << sum << endl;
+    }
+
+    return 0;
+}
+```

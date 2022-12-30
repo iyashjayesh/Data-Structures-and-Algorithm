@@ -23,3 +23,5 @@
 - 7. Wait for the pull request to get merged.
 - 8. Star this repository. :)
 
+Important Resources for Design Patterns and Refactoring 
+- [https://refactoring.guru/](https://refactoring.guru/)
