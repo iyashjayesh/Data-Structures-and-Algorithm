@@ -3,7 +3,7 @@
 ```md
 Input:
 12
-2 1 0 1 -2 3 4 -1 2 -1 2 -6 2 1
+2 1 0 1 -2 3 4 -1 2 -1 2 -6
 
 Output:
 Yes
@@ -101,9 +101,12 @@ int main() {
 ```
 
 ## Approach 3: Prefix Sum + Hashing 
-- Calculate prefix sum of all elements in the array. 
+- Calculate prefix sum of all elements in the array. Create a hash table to store the prefix sum. 
+- We can use unordered_set to store the prefix sum.  
+- Will keep on adding the prefix sum to the hash table and check if the prefix sum is already present in the hash table. 
 - If the prefix sum is 0, then the subarray from 0 to the current index is 0.
-- If the prefix sum is already present in the array, then the subarray from the index of the previous occurence of the prefix sum to the current index is 0. 
+
+
 - Time complexity: O(n)
 - Space complexity: O(n)
 
